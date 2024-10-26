@@ -4,9 +4,10 @@ int main()
 {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
-    int a = 5;
-    int b = 10;
-    int sum = a+b;
-    cout<<sum<<endl;
+    int a,b,c;
+    cin>>a>>b>>c;
+    int circles = floor((c+0.5)/a);
+    cout<<circles*b<<endl;
+
     return 0;
 }
