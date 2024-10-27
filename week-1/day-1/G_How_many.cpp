@@ -16,6 +16,7 @@ int main()
             }
         }
     }
-    cout<<count+3;
+   if(count>0) cout<<count+3;
+   else cout<<1;
     return 0;
 }
