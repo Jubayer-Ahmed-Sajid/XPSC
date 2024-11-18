@@ -7,20 +7,20 @@ int main()
     int n;
     long long k;
     cin >> n >> k;
-    vector<int> v(n);
+    vector<long long> v(n);
     for (int i = 0; i < n; i++)
     {
         cin >> v[i];
     }
     int l = 0, r = 0;
     long long ans = 0;
-    multiset<int> ml;
+    multiset<long long> ml;
 
     while (r < n)
     {
         ml.insert(v[r]);
-        int mn = *ml.begin();
-        int mx = *ml.rbegin();
+        long long mn = *ml.begin();
+        long long mx = *ml.rbegin();
         if (mx - mn <= k)
         {
             ans += (r - l + 1);
