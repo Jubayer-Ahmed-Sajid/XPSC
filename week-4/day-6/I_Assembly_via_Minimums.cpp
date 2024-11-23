@@ -19,7 +19,7 @@ int main()
         sort(b.begin(),b.end());
         int x = 1, ind = 0;
         int b_ind = n-x;
-        while(n-x>=0){
+        while(n-x>0){
             a[ind] = b[b_ind-1];
             x++;
             b_ind += n-x;
