@@ -21,42 +21,39 @@ int main()
         if (sum < k)
         {
             cout << -1 << endl;
-           
         }
         else if (sum == k)
         {
             cout << 0 << endl;
-          
-        }
-        else{
-int left = 0, current_sum = 0, max_length = 0;
-        for (int right = 0; right < n; right++)
-        {
-            current_sum += v[right];
-
-            while (current_sum > k)
-            {
-                current_sum -= v[left];
-                left++;
-            }
-
-            if (current_sum == k)
-            {
-                max_length = max(max_length, right - left + 1);
-            }
-        }
-
-        if (max_length > 0)
-        {
-            cout << n - max_length << endl;
         }
         else
         {
-            cout << -1 << endl;
-        }
+            int left = 0, current_sum = 0, max_length = 0;
+            for (int right = 0; right < n; right++)
+            {
+                current_sum += v[right];
 
+                while (current_sum > k)
+                {
+                    current_sum -= v[left];
+                    left++;
+                }
+
+                if (current_sum == k)
+                {
+                    max_length = max(max_length, right - left + 1);
+                }
+            }
+
+            if (max_length > 0)
+            {
+                cout << n - max_length << endl;
+            }
+            else
+            {
+                cout << -1 << endl;
+            }
         }
-        
     }
     return 0;
 }
